@@ -1,0 +1,183 @@
+$blue: #0078ff;
+$grey: #e4e4e4;
+$darkgrey: darken($grey, 70%);
+
+html {
+	font-size: 10px;
+}
+
+html, body {
+	margin: 0;
+	font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+}
+
+body {
+	font-size: 1.6em;
+	color: $darkgrey;
+}
+
+tt {
+	font-family: 'Roboto Mono', 'Courier', monospace;
+	line-height: 1.8em;
+	&.script {
+		font-size: 1.25em;
+		display: block;
+		padding: 0 1em;
+	}
+}
+
+nav {
+	padding: .5em .75em;
+	font-size: 1.25em;
+	font-weight: bold;
+	a {
+		text-decoration: none;
+		color: inherit;
+	}
+}
+
+main {
+	margin: 1em auto;
+	padding: 0 1em;
+	max-width: 90vw;
+}
+
+hr {
+	border: 0;
+	border-bottom: 0.4rem solid darken($grey, 5%);
+}
+
+form {
+	iframe {
+		display: none;
+	}
+	&#campaign {
+		display: inline;
+	}
+}
+
+textarea {
+	margin: 0.5em 0;
+	padding: 0.25em 0.5em;
+	width: 20em;
+	font-size: 0.9em;
+	font-family: inherit;
+	-webkit-appearance: none;
+	border: 1px solid $grey;
+}
+
+input {
+	display: block;
+	&.inline {
+		display: inline;
+	}
+	&[type="password"], &[type="text"] {
+		margin: 0.5em 0;
+		padding: 0.25em 0.5em;
+		width: 20em;
+		font-size: 0.9em;
+		font-family: inherit;
+		-webkit-appearance: none;
+		border: 1px solid $grey;
+	}
+	&[type="checkbox"] {
+		margin: 0.5em 0.5em 0.5em 0;
+		-webkit-appearance: none;
+		border: 0;
+		width: 1px;
+		cursor: pointer;
+		&:focus {
+			outline: none !important;
+		}
+		&:before {
+			display: inline-block;
+			content: "×";
+			width: 1em;
+			height: 1em;
+			text-align: center;
+			line-height: 0.95em;
+			font-size: 2em;
+			color: white;
+			border: 1px solid $grey;
+		}
+		&:checked:before {
+			content: "×";
+			color: $darkgrey;
+		}
+		&+label {
+			cursor: pointer;
+			font-size: 0.8em;
+			-webkit-appearance: none;
+			color: #666;
+			font-family: inherit;
+		}
+		&[readonly] {
+			opacity: 0.5;
+			pointer-events: none;
+			&+label {
+				opacity: 0.5;
+				pointer-events: none;
+			}
+		}
+	}
+}
+input[type="submit"], button, .btn {
+	text-decoration: none;
+	-webkit-appearance: none;
+	border-radius: 0;
+	background-color: $blue;
+	color: white;
+	font-weight: bold;
+	font-family: inherit;
+	font-size: 1em;
+	cursor: pointer;
+	border: 0;
+	padding: 1em 2em;
+	&:hover {
+		background-color: lighten($blue, 10%);
+	}
+	&.small {
+		font-size: 0.8em;
+		padding: 0.8em 1.3em;
+	}
+	&.grey {
+		background-color: darken($grey, 35%);
+		&:hover {
+			background-color: darken($grey, 25%);
+		}
+	}
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+td, th {
+	padding: 1em;
+	text-align: left !important;
+}
+th {
+	background-color: $grey;
+}
+tr {
+	background-color: lighten($grey, 8%);
+	&:nth-child(even) {
+		background-color: lighten($grey, 10%);
+	}
+}
+
+fieldset {
+	border: 0.2rem solid $darkgrey;
+
+	legend {
+		color: $darkgrey;
+		font-size: 1.2em;
+		font-weight: bold;
+		padding: 0 0.5em;
+	}
+}
+
+footer {
+	margin: 2em 0;
+}
